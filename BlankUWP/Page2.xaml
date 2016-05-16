@@ -5,7 +5,11 @@
     xmlns:local="using:BlankUWP"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:VM="using:BlankUWP.ViewModels"
     mc:Ignorable="d">
+    <Page.DataContext>
+        <VM:Page2ViewModel/>
+    </Page.DataContext>
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Grid.RowDefinitions>
@@ -17,7 +21,7 @@
             <TextBox x:Name="tbParamater" HorizontalAlignment="Left" Height="11" TextWrapping="Wrap"  Width="135"/>
 
         </StackPanel>
-        <ListView x:Name="listView" HorizontalAlignment="Left" Height="378" Margin="103,95,0,0" VerticalAlignment="Top" Width="144" Background="#FFBCF1DE" Header="Liste2" CanDragItems="True"/>
+        <ListView x:Name="listView" ItemsSource="{Binding Path=list}"  HorizontalAlignment="Left" Height="378" Margin="103,95,0,0" VerticalAlignment="Top" Width="144" Background="#FFBCF1DE" Header="Liste2" CanDragItems="True"/>
 
     </Grid>
 </Page>

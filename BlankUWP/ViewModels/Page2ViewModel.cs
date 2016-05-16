@@ -10,6 +10,7 @@ namespace BlankUWP.ViewModels
 {
     public class Page2ViewModel //:INotifyPropertyChanged
     {
+        //Testkommentar
         private ObservableCollection<string> _list;
 
         public ObservableCollection<string> list

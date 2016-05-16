@@ -1,0 +1,23 @@
+﻿<Page
+    x:Class="BlankUWP.Page2"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:BlankUWP"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="509*"/>
+            <RowDefinition Height="31*"/>
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Horizontal" Grid.Row="1" d:LayoutOverrides="LeftMargin, RightMargin, TopMargin, BottomMargin">
+            <Button x:Name="GoBack" Content="GoBack" Click="GoBack_Click"/>
+            <TextBox x:Name="tbParamater" HorizontalAlignment="Left" Height="11" TextWrapping="Wrap"  Width="135"/>
+
+        </StackPanel>
+        <ListView x:Name="listView" HorizontalAlignment="Left" Height="378" Margin="103,95,0,0" VerticalAlignment="Top" Width="144" Background="#FFBCF1DE" Header="Liste2" CanDragItems="True"/>
+
+    </Grid>
+</Page>
